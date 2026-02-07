@@ -1,0 +1,87 @@
+// COLOR VARIABLES
+$color-white: #f5f5f5;
+$color-2: #0a623c;
+$color-3: #0a1a3c;
+
+$color-dark: #111111;
+
+/*
+#0a3e3c
+#0a793c
+#0a973c
+#0a413c
+#0a1a3c
+#0a233c
+#0a623c
+#0a893c
+#0a323c
+*/
+
+// FONT VARIABLES
+$font-primary: 'Atkinson Hyperlegible Mono';
+$font-secondary: 'Share Tech Mono';
+// $font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;    // 1200px/16pxs
+$bp-large: 62.5em;    // 1000px/16pxs
+$bp-medium: 50em;     // 800px/16px
+$bp-small: 37.5em;    // 600px/16px
+$bp-smallest: 25em;   // 400px/16px
+
+
+*, 
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box; 
+  font-size: 62.5%; // 10px/16px browser default 
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 48%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  // color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6; 
+  font-size: 1.5rem;
+
+  // background-color: rgba($color-white, 1);
+  // z-index: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 12em 20vh 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 8rem;
+
+  background-color: rgba($color-white, 255);
+  // backdrop-filter: blur(10px); //blurs the background when opened
+
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 8rem 4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 5rem 3rem;
+  }
+}
+
+.blur-layer {
+  background: rgba(255, 255, 255, 1);
+}

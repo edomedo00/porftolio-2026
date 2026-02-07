@@ -1,0 +1,97 @@
+.projects {
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  display: grid;
+  padding-top: 5rem;
+
+
+  &__title{
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    backdrop-filter: blur(1px); 
+    background-color: rgba($color-dark, .95);
+    width: fit-content;
+    padding: .5rem 1.5rem;
+    color: $color-white;
+
+  }
+
+  &__list {
+    padding: 2rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: min-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: start;
+  padding: 1rem 1.5rem;
+   // gap: 1rem;
+  position: relative;
+
+  backdrop-filter: blur(1px);
+  background-image: linear-gradient(
+    rgba($color-white, .95),
+    rgba($color-white, .95)
+  );
+
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    border: 2px solid $color-2;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    align-self: end;
+
+    &__icon {
+
+      &-c {
+        width: 3rem;
+        height: 3rem;
+        display: block;
+        background-color: $color-2;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      
+      &-i {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-white;
+        margin-left: 0.4rem;
+        margin-top: 0.1rem;
+
+        @supports (mask-image: url()) {
+          background-color: white;
+          mask-image: url('../img/open-external.svg');
+          mask-size: cover;
+          background-image: none; //because the above bg img is not commented anymore
+        }
+      }
+    }
+  }
+
+  &__img-1 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.btn-project {
+  display: none;
+}

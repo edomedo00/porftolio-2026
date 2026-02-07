@@ -1,0 +1,19 @@
+<svg style="position:absolute; width:0; height:0; overflow:hidden;"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+
+    <!-- Normalized 32x32 version -->
+    <symbol id="icon-open-external" viewBox="0 0 32 32">
+      <title>open-external</title>
+      <path d="M13 8v3H5v13h13v-8h3v11H2V8h11zm17-6v11h-3V6.4L15.6 17.8l-2.4-2.4L24.6 4H18V1h12z"/>
+    </symbol>
+
+    <!-- Original SVGRepo icon, sprite-formatted -->
+    <symbol id="icon-open-external-lg" viewBox="0 0 512 512">
+      <title>open-external</title>
+      <path d="M213.333333 128v42.666667H85.333333V384H298.666667V298.666667h42.666666V426.666667H0V128h213.333333zM426.666667 0v170.666667H384V72.835L207.084945 249.751611l-30.16989-30.169889L353.83 42.666667H256V0h170.666667z"/>
+    </symbol>
+
+  </defs>
+</svg>

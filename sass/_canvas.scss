@@ -1,0 +1,19 @@
+.p5Canvas {
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  z-index: -10;
+}
+
+.blur {
+  position: fixed;
+  top: -1rem;
+  left: -1rem;
+  width: 110%;
+  height: 110%;
+
+  // background-image: linear-gradient($color-2, $color-2);
+  backdrop-filter: blur(.5px);
+  z-index: -5;
+  // display: none;
+}

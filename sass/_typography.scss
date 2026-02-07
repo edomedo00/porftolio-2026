@@ -1,0 +1,56 @@
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-family: $font-secondary;
+  font-size: 8rem;
+  line-height: 1;
+  color: inherit;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 7rem;
+  }
+}
+
+
+.heading-2 {
+  @extend %heading;
+  font-family: $font-secondary;
+
+  font-size: 3rem;
+  // font-weight: 600;
+  color: inherit;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 2.6rem;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  color: inherit;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.8rem;
+  }
+}
+
+.email {
+
+  &,
+  &:link,
+  &:active {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: $font-primary;
+    color: inherit;
+  }
+
+}
