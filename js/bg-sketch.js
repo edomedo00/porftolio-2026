@@ -9,8 +9,8 @@ let cache = {
 let gray, sizes, angles, weights;
 
 function preload() {
-  img  = loadImage("./img/treboles_100x178.jpg");
-  img2 = loadImage("./img/treboles_100x178_70.jpg");
+  img  = loadImage("./img/treboles_100x178_70.jpg");
+  img2 = loadImage("./img/treboles_100x178_50.jpg");
 }
 
 function updateLayout() {
@@ -21,7 +21,7 @@ function updateLayout() {
 
   pageHeight = Math.max(viewportH, contentH);
 
-  sizeScale = (windowWidth >= 1200) ? 2 : 1.5;
+  sizeScale = (windowWidth >= 1200) ? 2.5 : 2;
 }
 
 function selectImage() {
@@ -40,7 +40,7 @@ function setup() {
 
   let c = createCanvas(windowWidth + 30, pageHeight);
   // c.parent('canvas-wrapper');
-  frameRate(7);
+  frameRate(5);
   colorMode(RGB);
 
   applyActiveImage();
@@ -73,7 +73,7 @@ function applyActiveImage() {
 function draw() {
   background(250);
 
-  const slider1 = 0.65;
+  const slider1 = 0.75;
   const slider2 = 20;
 
   for (let x = 0; x < activeImg.width; x++) {
