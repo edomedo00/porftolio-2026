@@ -9,7 +9,7 @@ let cache = {
 let gray, sizes, angles, weights;
 
 function preload() {
-  img  = loadImage("./img/treboles_100x178_70.jpg");
+  img  = loadImage("./img/treboles_100x178_80.jpg");
   img2 = loadImage("./img/treboles_100x178_50.jpg");
 }
 
