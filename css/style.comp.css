@@ -219,30 +219,27 @@ body {
   width: 3rem;
   height: 3rem;
   background-color: #0a66c2;
-  mask-image: url("/img/linkedin.png");
+  mask-image: url("../img/linkedin.png");
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
 
 .github-logo {
   width: 3rem;
   height: 3rem;
   background-color: #8534F3;
-  mask-image: url("/img/github.png");
+  mask-image: url("../img/github.png");
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
 
 .instagram-logo {
   width: 2.9rem;
   height: 2.9rem;
   background-color: #E1306C;
-  mask-image: url("/img/instagram.png");
+  mask-image: url("../img/instagram.png");
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
 
 .btn, .btn:link, .btn:visited {

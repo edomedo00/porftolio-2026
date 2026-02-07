@@ -117,8 +117,7 @@
 
   mask-image: url('../img/linkedin.png');
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
 
 .github-logo {
@@ -128,8 +127,7 @@
 
   mask-image: url('../img/github.png');
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
 
 .instagram-logo {
@@ -139,6 +137,5 @@
 
   mask-image: url('../img/instagram.png');
   mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  mask-size: cover;
 }
