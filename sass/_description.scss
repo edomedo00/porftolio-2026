@@ -20,8 +20,12 @@
     color: $color-white;
     background-color: $color-dark;
 
-    backdrop-filter: blur(1px); 
-    background-color: rgba($color-dark, .95);
+    @include black-blured;
+
+
+    &:hover {
+      color: $color-3;
+    }
 
   }
 
@@ -34,9 +38,17 @@
     font-weight: 400;
     color: $color-dark;
     background-color: $color-white;
-    backdrop-filter: blur(1px); 
-    background-color: rgba($color-white, .95);
-    box-shadow: 0 3rem rem rgba($color-dark, .4);
+
+    @include white-blured;
+    
+    // &:hover {
+    //   color: $color-white;
+
+    //   @include black-blured;
+    // }
+
+
+    // box-shadow: 0 3rem rem rgba($color-dark, .4);
 
     @media only screen and (max-width: $bp-largest) {
       grid-column: 1 / -1;
@@ -88,8 +100,7 @@
     }
 
     &-mail {
-      backdrop-filter: blur(1px); 
-      background-color: rgba($color-dark, .95);
+      @include black-blured;
       width: fit-content;
       padding: 1rem 1.5rem;
       color: $color-white;
@@ -98,6 +109,10 @@
 
       @media only screen and (max-width: 31em) {
         justify-self: start;
+      }
+
+      &:hover {
+        color: $color-3;
       }
     }
   }

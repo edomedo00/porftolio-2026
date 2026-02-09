@@ -1,0 +1,9 @@
+@mixin white-blured {
+  backdrop-filter: blur(.5px); 
+  background-color: rgba($color-white, .95);
+}
+
+@mixin black-blured {
+  backdrop-filter: blur(.5px); 
+  background-color: rgba($color-dark, .97);
+}

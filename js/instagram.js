@@ -8,27 +8,20 @@ igLink.onclick = function(e) {
   if (isAndroid || isiOS) {
     e.preventDefault();
 
-    let appUrl;
-    if (isAndroid) {
+    let appUrl = isAndroid 
+      ? `intent://www.instagram.com/_u/${username}/#Intent;package=com.instagram.android;scheme=https;end`
+      : `instagram://user?username=${username}`;
 
-      appUrl = `intent://www.instagram.com/_u/${username}/#Intent;package=com.instagram.android;scheme=https;end`;
-    } else {
+    window.location.replace(appUrl);
 
-      appUrl = `instagram://user?username=${username}`;
-    }
-
-    window.location.href = appUrl;
 
     const start = Date.now();
     const timer = setTimeout(() => {
-      if (Date.now() - start < 1500) {
+      if (Date.now() - start < 2000) {
         window.location.href = `https://www.instagram.com/${username}/`;
       }
     }, 1000);
 
-    // Stop the timer if the user actually leaves the page to the app
-    window.onblur = function() {
-      clearTimeout(timer);
-    };
+    window.onblur = () => clearTimeout(timer);
   }
 };
