@@ -26,11 +26,16 @@
     </p>
     <div class="description__social">
       <div class="description__social-media">
-          <a class="social-media" href="https://www.instagram.com/bitmedia._?utm_source=ig_web_copy_link" target="_blank" rel="noopener" >
+        <a class="social-media" href="https://www.instagram.com/bitmedia._" onclick="openInstagram(event)" target="_blank">
           <button class="btn btn-social">
             <div class="instagram-logo"></div>
           </button>
         </a>
+          <a class="social-media"
+   href="https://www.instagram.com/bitmedia._"
+   target="_blank">
+   Instagram
+</a>
         <a class="social-media" href="https://www.linkedin.com/in/edmundo-medel" target="_blank">
           <button class="btn btn-social">
             <div class="linkedin-logo"></div>
@@ -48,9 +53,6 @@
     </div>
   </div>
 
-  <!-- MODIFICANDO EL H3 QUE NO SE REFLEJA EN LA PAGINA -->
-  <!-- FALTA PROBAR DIFERENTES VALORES DE BLUR PARA LAS CAJAS BLANCAS -->
-  <!-- ANIMAR BOTONES -->
    <div class="projects">
     <div class="projects__title">
       <h2 class="heading-2">Proyectos</h2>
@@ -98,5 +100,16 @@
   <script src="./js/bg-sketch2.js"></script>
   <!-- <script src="./js/instagram.js"></script> -->
   <!-- <script src="./js/cursor2.js"></script> -->
+   <script>
+      function openInstagram(e) {
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          e.preventDefault();
+          window.location = "instagram://user?username=bitmedia._";
+          setTimeout(() => {
+            window.location = "https://www.instagram.com/bitmedia._";
+          }, 500);
+        }
+      }
+    </script>
 </body>
 </html>
