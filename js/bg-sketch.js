@@ -39,7 +39,7 @@ function setup() {
   updateLayout();
 
   let c = createCanvas(windowWidth + 30, pageHeight);
-  frameRate(3);
+  frameRate(10);
   colorMode(RGB);
 
   applyActiveImage();
