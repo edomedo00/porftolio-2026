@@ -4,12 +4,12 @@ const offsetScale = 0.2;
 let tileWidth, tileHeight, sizeScale, pageHeight;
 let cache = {
   img: null,
-  img2: null
+  img2: null,
 };
 let gray, sizes, angles, weights;
 
 function preload() {
-  img  = loadImage("./img/treboles_100x178_80.jpg");
+  img = loadImage("./img/treboles_100x178_80.jpg");
   img2 = loadImage("./img/treboles_100x178_50.jpg");
 }
 
@@ -21,25 +21,25 @@ function updateLayout() {
 
   pageHeight = Math.max(viewportH, contentH);
 
-  sizeScale = (windowWidth >= 1200) ? 2.5 : 2;
+  sizeScale = windowWidth >= 1200 ? 2.5 : 2;
 }
 
 function selectImage() {
-  activeImg = (windowWidth >= 1400) ? img : img2;
+  activeImg = windowWidth >= 1400 ? img : img2;
   // console.log(activeImg)
 }
 
 function setup() {
   pixelDensity(1);
 
-  cache.img  = precomputeForImage(img);
+  cache.img = precomputeForImage(img);
   cache.img2 = precomputeForImage(img2);
 
   selectImage();
   updateLayout();
 
   let c = createCanvas(windowWidth + 30, pageHeight);
-  frameRate(10);
+  frameRate(3);
   colorMode(RGB);
 
   applyActiveImage();
@@ -54,19 +54,18 @@ function windowResized() {
 }
 
 function applyActiveImage() {
-  tileWidth  = width / activeImg.width;
+  tileWidth = width / activeImg.width;
   tileHeight = height / activeImg.height;
 
-  const data = (activeImg === img) ? cache.img : cache.img2;
+  const data = activeImg === img ? cache.img : cache.img2;
 
   // console.log('data', data)
-  gray    = data.gray;
-  sizes   = data.sizes;
-  angles  = data.angles;
+  gray = data.gray;
+  sizes = data.sizes;
+  angles = data.angles;
   weights = data.weights;
   // console.log('gray', gray)
 }
-
 
 function draw() {
   background(250);
@@ -93,12 +92,7 @@ function draw() {
 
       translate(posX, posY);
       rotate(angles[x][y]);
-      rect(
-        xOffset,
-        yOffset,
-        sizes[x][y] * sizeScale,
-        sizes[x][y] * sizeScale
-      );
+      rect(xOffset, yOffset, sizes[x][y] * sizeScale, sizes[x][y] * sizeScale);
       resetMatrix();
     }
   }
@@ -107,8 +101,8 @@ function draw() {
 }
 
 function keyReleased() {
-  if (key === 's' || key === 'S') {
-    saveCanvas(String(Date.now()), 'png');
+  if (key === "s" || key === "S") {
+    saveCanvas(String(Date.now()), "png");
   }
 }
 
@@ -134,9 +128,9 @@ function precomputeForImage(image) {
 
       const gscale = (r + g + b) / 3;
 
-      gray[x][y]    = gscale;
-      sizes[x][y]   = map(gscale, 0, 255, 6, 2);
-      angles[x][y]  = map(gscale, 0, 255, 1, PI);
+      gray[x][y] = gscale;
+      sizes[x][y] = map(gscale, 0, 255, 6, 2);
+      angles[x][y] = map(gscale, 0, 255, 1, PI);
       weights[x][y] = map(gscale, 0, 255, 15, 0.1);
     }
   }
